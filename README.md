@@ -2,7 +2,7 @@
 
 ## 概要
 
- zabbix-agentとaws-cliを使って、AWSのコストをモニタリングする。
+ Zabbix(zabbix-agentとaws-cli)を利用し、AWSのコストをモニタリングする。
 
 
 ## 注意事項
