@@ -5,6 +5,9 @@
  zabbix-agentとaws-cliを使って、AWSのコストをモニタリングする。
  ただし、AWSのCostExplorerを利用するためコストが発生します。
 
+ * zabbix-agentの設定ファイル
+ * zabbixのテンプレート
+
 ## 内容
 
 * AWSのトータルコストと各サービスのコストをモニタリング
@@ -13,6 +16,7 @@
 ## 稼働条件
 
 * zabbixサーバ(AWSCLIが動くこと)が存在すること
+* 蒸気サーバでjqコマンドが使えること
 
 ## 導入手順
 
@@ -24,16 +28,21 @@
 
 ### zabbixユーザでのAWSコンフィグ設定(既に設定されていれば不要)
 
-zabbixユーザのホームディレクトリを調べる
+#### zabbixユーザのホームディレクトリを調べる
+
 ```
 # egrep zabbix /etc/passwd
 zabbix:x:2000:2000:Zabbix:/var/lib/zabbix:/sbin/nologin
 ```
-zabbixユーザのホームディレクトリ(/var/lib/zabbix)が無い場合は作成する
+
+#### zabbixユーザのホームディレクトリ(/var/lib/zabbix)が無い場合は作成する
+
 ```
 # mkdir /var/lib/zabbix
 ```
-AWSコンフィグ用のファイルを設置する
+
+#### AWSコンフィグ用のファイルを設置する
+
 ```
 # mkdir /var/lib/zabbix/.aws
 # cat > /var/lib/zabbix/.aws/config 
