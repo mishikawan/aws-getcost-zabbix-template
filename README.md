@@ -106,6 +106,7 @@ aws_secret_access_key=XXXXXXXXXXXXXXXXXXXX
 必要に応じて、template内のMacrosの内容を変更する
 
 | Macro	| Value	| 備考 |
+| ----- | ----- | ----- |
 | {$BUDGET_HIGH} | 100 | コストの閾値（深刻度=HIGH) |
 | {$BUDGET_WARNING} | 10 | コストの閾値（深刻度=WARNING) |
 | {$COSTCHECK_DATETIME} | h11m00 | Cost  Explorerを呼び出す時間 (h11m00 = 11:00) |
