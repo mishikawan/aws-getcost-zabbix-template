@@ -3,20 +3,28 @@
 ## 概要
 
  zabbix-agentとaws-cliを使って、AWSのコストをモニタリングする。
- ただし、AWSのCostExplorerを利用するためコストが発生します。
 
- * zabbix-agentの設定ファイル
- * zabbixのテンプレート
+
+## 注意事項
+
+ AWSのCostExplorerを利用するためコストが発生します。
+ 現時点では、CostExplorerを実行するたびに、0.01USD発生。
+ よって、1日に0.02USDの費用が発生します。
 
 ## 内容
 
+作成物は以下の2ファイル 
+ * zabbix-agentの設定ファイル
+ * zabbixのテンプレート
+
+実現内容は以下の2項目
 * AWSのトータルコストと各サービスのコストをモニタリング
 * トータルコストに対して、閾値(WARN/HIGH)のトリガーを設定
 
 ## 稼働条件
 
 * zabbixサーバ(AWSCLIが動くこと)が存在すること
-* 蒸気サーバでjqコマンドが使えること
+* 上記サーバでjqコマンドが使えること
 
 ## 導入手順
 
@@ -102,3 +110,5 @@ aws_secret_access_key=XXXXXXXXXXXXXXXXXXXX
 | {$BUDGET_WARNING} | 10 | コストの閾値（深刻度=WARNING) |
 | {$COSTCHECK_DATETIME} | h11m00 | Cost  Explorerを呼び出す時間 (h11m00 = 11:00) |
 
+| 注意： アイテム収集間隔(interval)を短くすると、コストが上がります。
+|   テンプレートデフォルトでは、1日2回AWSCLI実行するので、0.02USD発生します。
