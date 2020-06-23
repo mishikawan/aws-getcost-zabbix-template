@@ -36,14 +36,14 @@
 
 ### zabbixユーザでのAWSコンフィグ設定(既に設定されていれば不要)
 
-#### zabbixユーザのホームディレクトリを調べる
+#### zabbixユーザのホームディレクトリのパスを調べる
 
 ```
 # egrep zabbix /etc/passwd
 zabbix:x:2000:2000:Zabbix:/var/lib/zabbix:/sbin/nologin
 ```
 
-#### zabbixユーザのホームディレクトリ(/var/lib/zabbix)が無い場合は作成する
+#### zabbixユーザのホームディレクトリ(上記例で/var/lib/zabbix)が無い場合は作成する
 
 ```
 # mkdir /var/lib/zabbix
