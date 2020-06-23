@@ -7,9 +7,9 @@
 
 ## 注意事項
 
- AWSのCostExplorerを利用するためコストが発生します。
- 現時点では、CostExplorerを実行するたびに、0.01USD発生。
- よって、1日に0.02USDの費用が発生します。
+ * AWSのCostExplorerを利用するためコストが発生します。
+ * 現時点では、CostExplorerを実行するたびに、0.01USD発生。
+ * 当機能を使用すると、1日に2回CostExplorerを呼び出すため、0.02USDの費用が発生します。
 
 ## 内容
 
