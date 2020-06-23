@@ -107,8 +107,8 @@ aws_secret_access_key=XXXXXXXXXXXXXXXXXXXX
 
 | Macro	| Value	| 備考 |
 | ----- | ----- | ----- |
-| {$BUDGET_HIGH} | 100 | コストの閾値（深刻度=HIGH) |
-| {$BUDGET_WARNING} | 10 | コストの閾値（深刻度=WARNING) |
+| {$BUDGET_HIGH} | 100 | コストの閾値 100USD超えればアラート（深刻度=HIGH) |
+| {$BUDGET_WARNING} | 10 | コストの閾値 10USD超えればアラート（深刻度=WARNING) |
 | {$COSTCHECK_DATETIME} | h11m00 | Cost  Explorerを呼び出す時間 (h11m00 = 11:00) |
 
 > 注意： アイテム収集間隔(interval)を短くすると、コストが上がります。
