@@ -111,5 +111,5 @@ aws_secret_access_key=XXXXXXXXXXXXXXXXXXXX
 | {$BUDGET_WARNING} | 10 | コストの閾値（深刻度=WARNING) |
 | {$COSTCHECK_DATETIME} | h11m00 | Cost  Explorerを呼び出す時間 (h11m00 = 11:00) |
 
-| 注意： アイテム収集間隔(interval)を短くすると、コストが上がります。
-|   テンプレートデフォルトでは、1日2回AWSCLI実行するので、0.02USD発生します。
+> 注意： アイテム収集間隔(interval)を短くすると、コストが上がります。
+>   テンプレートデフォルトでは、1日2回AWSCLI実行するので、0.02USD発生します。
