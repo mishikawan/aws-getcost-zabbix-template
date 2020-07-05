@@ -113,3 +113,8 @@ aws_secret_access_key=XXXXXXXXXXXXXXXXXXXX
 
 > 注意： アイテム収集間隔(interval)を短くすると、コストが上がります。
 >   テンプレートデフォルトでは、1日2回AWSCLI実行するので、0.02USD発生します。
+
+### aws cliサンプル
+$ aws ce get-cost-and-usage --region us-east-1 --time-period Start=`date '+%Y-%m-01'`,End=`date -d 'next month' '+%Y-%m-01'`  --granularity MONTHLY --metrics UnblendedCost --group-by Type=DIMENSION,Key=REGION^C
+
+$ aws ce get-cost-and-usage --region us-east-1 --time-period Start=`date '+%Y-%m-01'`,End=`date -d 'next month' '+%Y-%m-01'`  --granularity MONTHLY --metrics UnblendedCost --filters '{ "Dimensions": { "Key": "REGION", "Values": ["ap-northeast-1"] }}'
